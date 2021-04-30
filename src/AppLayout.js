@@ -7,19 +7,19 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import Home from './pages/Home'
 import Login from './pages/Login'
 
-const Stack = createStackNavigator();
-const Drawer  = createDrawerNavigator();
+const Stack = createStackNavigator()
+const Drawer  = createDrawerNavigator()
 
 
 const AppLayout = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Login" component={Login} />
-      </Drawer.Navigator>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 export default AppLayout

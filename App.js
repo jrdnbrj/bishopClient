@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 
 import {
   SafeAreaView,
@@ -15,15 +14,21 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import AppLayout from './src/App'
+// Apollo
+import { ApolloProvider } from "@apollo/client/react";
+import client from "./src/adapters/apolloClient";
+
+import AppLayout from './src/AppLayout'
 
 
-const App: () => Node = () => {
+const App = () => {
   return (
-    <SafeAreaView style={styles.background}>
-      <StatusBar barStyle={'dark-content'} backgroundColor={'#36FF95'}/>
-      <AppLayout />
-    </SafeAreaView>
+    <ApolloProvider client={client}>
+      <SafeAreaView style={styles.background}>
+        <StatusBar barStyle={'dark-content'} backgroundColor={'#36FF95'}/>
+        <AppLayout />
+      </SafeAreaView>
+    </ApolloProvider>
   );
 };
 

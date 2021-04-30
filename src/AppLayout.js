@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 const Drawer  = createDrawerNavigator();
 
 
-const App = () => {
+const AppLayout = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
@@ -22,4 +22,4 @@ const App = () => {
   );
 }
 
-export default App
+export default AppLayout

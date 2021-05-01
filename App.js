@@ -30,7 +30,7 @@ const App = () => {
     <ApolloProvider client={client}>
       <ReduxProvider store={store}>
         <SafeAreaView style={styles.background}>
-          <StatusBar barStyle={'dark-content'} backgroundColor={'#36FF95'}/>
+          <StatusBar barStyle={'light-content'} backgroundColor={'#3E2B88'}/>
           <AppLayout />
         </SafeAreaView>
       </ReduxProvider>
@@ -40,9 +40,9 @@ const App = () => {
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: '#36FF95',
+    // backgroundColor: '#EEEEEE',
     flex: 1
   },
-});
+})
 
 export default App

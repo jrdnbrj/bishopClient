@@ -52,8 +52,8 @@ const Home = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: '#36FF94',
-    flex: 1
+    // backgroundColor: '#36FF94',
+    // flex: 1
   },
   text: {
     fontSize: 20

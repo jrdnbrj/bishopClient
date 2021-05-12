@@ -8,11 +8,7 @@
 
 import React from 'react'
 
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-} from 'react-native'
+import { SafeAreaView, StatusBar } from 'react-native'
 
 // Apollo
 import { ApolloProvider } from "@apollo/client/react"
@@ -29,7 +25,7 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <ReduxProvider store={store}>
-        <SafeAreaView style={styles.background}>
+        <SafeAreaView style={{ flex: 1 }}>
           <StatusBar barStyle={'light-content'} backgroundColor={'#3E2B88'}/>
           <AppLayout />
         </SafeAreaView>
@@ -37,12 +33,5 @@ const App = () => {
     </ApolloProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  background: {
-    // backgroundColor: '#EEEEEE',
-    flex: 1
-  },
-})
 
 export default App

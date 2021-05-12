@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View } from 'react-native'
 
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator()
 
 
 const AppLayout = () => {
-  return <View style={styles.background}>
+  return <View style={{ flex: 1 }}>
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home"
         screenOptions={({ route }) => ({
@@ -47,12 +47,5 @@ const AppLayout = () => {
     </NavigationContainer>
   </View>
 }
-
-const styles = StyleSheet.create({
-  background: {
-    backgroundColor: '#EEEEEE',
-    flex: 1
-  },
-});
 
 export default AppLayout

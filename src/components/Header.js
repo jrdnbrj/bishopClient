@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+
 import Icon from 'react-native-vector-icons/Ionicons'
 
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 const Header = ({ scene, previous, navigation }) => {
     const { options } = scene.descriptor
